@@ -1,0 +1,19 @@
+[Unit]
+Description=USD/JPY Micro Futures NFP Hedging Strategy
+After=network.target
+
+[Service]
+Type=simple
+User=ibtrader
+WorkingDirectory=/home/ibtrader/brkfx
+ExecStart=/bin/bash -c "source /home/ibtrader/brkfx/venv/bin/activate && python /home/ibtrader/brkfx/usd-micro.py"
+Restart=on-failure
+RestartSec=10s
+StandardOutput=journal
+StandardError=journal
+
+# Environmental variables from .env file
+EnvironmentFile=/home/ibtrader/brkfx/.env
+
+[Install]
+WantedBy=multi-user.target
