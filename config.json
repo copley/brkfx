@@ -1,0 +1,41 @@
+{
+  "account": {
+    "ib_account": "YOUR_ACCOUNT_ID",
+    "port": 4001,
+    "host": "127.0.0.1",
+    "client_id": 1
+  },
+  "strategy": {
+    "symbols": ["M6J"],
+    "quantity": {
+      "M6J": 2
+    },
+    "sl_pips": 17,
+    "tp_pips": 76,
+    "minutes_before_nfp": 2,
+    "auto_reconnect": true,
+    "max_retry_attempts": 3,
+    "reconnect_delay": 60
+  },
+  "logging": {
+    "level": "INFO",
+    "file_path": "usd-micro.log",
+    "max_size_mb": 10,
+    "backup_count": 5
+  },
+  "notifications": {
+    "enabled": false,
+    "email": {
+      "enabled": false,
+      "smtp_server": "smtp.gmail.com",
+      "smtp_port": 587,
+      "sender_email": "your_email@gmail.com",
+      "recipient_email": "your_email@gmail.com"
+    },
+    "telegram": {
+      "enabled": false,
+      "bot_token": "YOUR_TELEGRAM_BOT_TOKEN",
+      "chat_id": "YOUR_TELEGRAM_CHAT_ID"
+    }
+  }
+}
